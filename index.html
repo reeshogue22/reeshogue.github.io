@@ -17,7 +17,6 @@
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
             background-color: #f6f6f6;
             color: #333;
-            transition: background-color 0.3s ease;
         }
 
         /* Container for the whole page */
@@ -71,25 +70,26 @@
         }
 
         /* Dark mode styles */
-        .dark-mode {
+        body.dark-mode {
             background-color: #222;
             color: #fff;
-            transition: background-color 0.3s ease;
         }
 
-        .dark-mode button {
+        .dark-mode-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .dark-mode-toggle:hover {
             background-color: #555;
-            color: #fff;
         }
-
-        .dark-mode a {
-            color: #fff;
-        }
-
-        .dark-mode footer p {
-            color: #ccc;
-        }
-
     </style>
 </head>
 
@@ -179,11 +179,9 @@
         </footer>
     </div>
 
-    <button class="download-button">
-        <a href="./resume.pdf" download="rees_hogue_resume.pdf">Download Resume</a>
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()">
+        Toggle Dark Mode
     </button>
-
-    <button class="dark-mode-button" onclick="toggleDarkMode()">Toggle Dark Mode</button>
 
     <script>
         function toggleDarkMode() {
