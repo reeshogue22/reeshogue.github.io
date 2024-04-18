@@ -77,7 +77,7 @@
 
         .dark-mode-toggle {
             position: fixed;
-            bottom: 20px;
+            bottom: 80px;
             right: 20px;
             padding: 10px 20px;
             background-color: #333;
@@ -89,6 +89,27 @@
 
         .dark-mode-toggle:hover {
             background-color: #555;
+        }
+
+        .download-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #00950c;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .download-button a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .download-button:hover {
+            background-color: #007aff;
         }
     </style>
 </head>
@@ -178,6 +199,10 @@
             <p>With a 👍 by Rees Hogue. All rights reserved.</p>
         </footer>
     </div>
+
+    <button class="download-button">
+        <a href="./resume.pdf" download="rees_hogue_resume.pdf">Download Resume</a>
+    </button>
 
     <button class="dark-mode-toggle" onclick="toggleDarkMode()">
         Toggle Dark Mode
