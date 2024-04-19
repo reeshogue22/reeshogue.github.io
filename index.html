@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rees Hogue - Personal Webpage</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the external CSS file -->
 </head>
 
 <body>
@@ -17,6 +17,7 @@
             <p>Welcome to my personal webpage!</p>
         </header>
 
+        <!-- Navigation bar -->
         <nav class="nav-links">
             <a href="#about">About Me</a>
             <a href="#contact">Contact Information</a>
@@ -128,13 +129,23 @@
         <img src="github-icon.png" alt="GitHub" width="30" height="30">
     </a>
 
+    <!-- JavaScript for sticky navigation -->
     <script>
+        window.addEventListener('scroll', function() {
+            var nav = document.querySelector('nav');
+            if (window.scrollY > 100) { // Adjust 100 to the desired scroll position
+                nav.classList.add('sticky');
+            } else {
+                nav.classList.remove('sticky');
+            }
+        });
+
         // Function to toggle the visibility of the mobile menu
         function toggleMobileMenu() {
             var mobileMenu = document.querySelector('.mobile-menu');
             mobileMenu.classList.toggle('open');
         }
-    
+
         // Function to hide the mobile menu when a navigation link is clicked
         document.querySelectorAll('.mobile-menu a').forEach(link => {
             link.addEventListener('click', () => {
@@ -142,7 +153,7 @@
                 mobileMenu.classList.remove('open');
             });
         });
-    
+
         // Function to toggle dark mode
         function toggleDarkMode() {
             var body = document.body;
@@ -153,7 +164,7 @@
             }
         }
     </script>
-        
+
 </body>
 
 </html>
