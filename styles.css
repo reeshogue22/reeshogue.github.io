@@ -135,13 +135,79 @@ body.dark-mode {
 }
 
 /* Navigation bar styles */
-nav.nav-links a {
+nav {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 20px; /* Increase text size */
+}
+
+nav a {
     text-decoration: none;
-    color: #00950c; /* Set navigation text color */
+    color: #00950c; /* Set navigation text color to green */
     font-weight: bold;
     margin: 0 15px; /* Increased margin for better spacing */
 }
 
-nav.nav-links a:hover {
+nav a:hover {
     text-decoration: underline;
+}
+
+/* Mobile navigation menu styles */
+.mobile-menu-icon {
+    font-size: 30px; /* Increase font size for the ☰ icon */
+    display: none; /* Hide by default on larger screens */
+}
+
+.mobile-menu {
+    display: none; /* Hide by default */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 999; /* Ensure it appears above other content */
+}
+
+.mobile-menu a {
+    display: block;
+    padding: 15px 20px; /* Increased padding for better touch area */
+    color: #00950c; /* Set navigation text color to green for mobile */
+    font-size: 20px; /* Increase text size */
+}
+
+/* Style for dark mode */
+body.dark-mode nav a {
+    color: #6eff6e; /* Change navigation link color in dark mode */
+}
+
+body.dark-mode nav a:hover {
+    text-decoration: underline; /* Keep underline effect in dark mode */
+}
+
+body.dark-mode .mobile-menu {
+    background-color: #333; /* Change background color of mobile menu in dark mode */
+}
+
+body.dark-mode .mobile-menu a {
+    color: #6eff6e; /* Change text color of mobile menu items in dark mode */
+}
+
+@media only screen and (max-width: 800px) {
+    /* Adjust styles for smaller screens */
+    nav {
+        display: none; /* Hide navigation links */
+    }
+
+    .mobile-menu-icon {
+        display: block; /* Display the menu icon */
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 1000; /* Ensure it appears above other content */
+        cursor: pointer;
+    }
+
+    .mobile-menu.open {
+        display: block; /* Display the menu when open */
+    }
 }
