@@ -188,7 +188,7 @@ body.dark-mode nav {
     display: block;
     padding: 15px 20px; /* Increased padding for better touch area */
     color: #00950c; /* Set navigation text color to green for mobile */
-    font-size: 20px; /* Increase text size */
+    font-size: 40px; /* Increase text size */
 }
 
 /* Style for dark mode */
