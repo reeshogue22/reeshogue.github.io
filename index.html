@@ -156,6 +156,47 @@
         nav a:hover {
             text-decoration: underline;
         }
+
+        /* Mobile navigation menu styles */
+        .mobile-menu-icon {
+            display: none; /* Hide by default on larger screens */
+        }
+
+        .mobile-menu {
+            display: none; /* Hide by default */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #fff;
+            z-index: 999; /* Ensure it appears above other content */
+        }
+
+        .mobile-menu a {
+            display: block;
+            padding: 10px 20px;
+            color: #333;
+        }
+
+        @media only screen and (max-width: 800px) {
+            /* Adjust styles for smaller screens */
+            nav {
+                display: none; /* Hide navigation links */
+            }
+
+            .mobile-menu-icon {
+                display: block; /* Display the menu icon */
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                z-index: 1000; /* Ensure it appears above other content */
+                cursor: pointer;
+            }
+
+            .mobile-menu.open {
+                display: block; /* Display the menu when open */
+            }
+        }
     </style>
 </head>
 
@@ -168,13 +209,27 @@
             <p>Welcome to my personal webpage!</p>
         </header>
 
-        <nav>
+        <nav class="nav-links">
             <a href="#about">About Me</a>
             <a href="#contact">Contact Information</a>
             <a href="#skills">Skills</a>
             <a href="#education">Education</a>
             <a href="#certifications">Certifications</a>
         </nav>
+
+        <!-- Mobile navigation menu icon -->
+        <div class="mobile-menu-icon" onclick="toggleMobileMenu()">
+            ☰
+        </div>
+
+        <!-- Mobile navigation menu -->
+        <div class="mobile-menu">
+            <a href="#about">About Me</a>
+            <a href="#contact">Contact Information</a>
+            <a href="#skills">Skills</a>
+            <a href="#education">Education</a>
+            <a href="#certifications">Certifications</a>
+        </div>
 
         <section id="about">
             <h2>About Me</h2>
@@ -266,6 +321,13 @@
     </a>
 
     <script>
+        // Function to toggle the visibility of the mobile menu
+        function toggleMobileMenu() {
+            var mobileMenu = document.querySelector('.mobile-menu');
+            mobileMenu.classList.toggle('open');
+        }
+
+        // Function to toggle dark mode
         function toggleDarkMode() {
             var body = document.body;
             body.classList.toggle("dark-mode");
