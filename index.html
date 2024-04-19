@@ -160,6 +160,7 @@
 
         /* Mobile navigation menu styles */
         .mobile-menu-icon {
+            font-size: 30px; /* Increase font size for the ☰ icon */
             display: none; /* Hide by default on larger screens */
         }
 
@@ -185,12 +186,16 @@
             color: #6eff6e; /* Change navigation link color in dark mode */
         }
 
+        body.dark-mode nav a:hover {
+            text-decoration: underline; /* Keep underline effect in dark mode */
+        }
+
         body.dark-mode .mobile-menu {
             background-color: #333; /* Change background color of mobile menu in dark mode */
         }
 
         body.dark-mode .mobile-menu a {
-            color: #fff; /* Change text color of mobile menu items in dark mode */
+            color: #6eff6e; /* Change text color of mobile menu items in dark mode */
         }
 
         @media only screen and (max-width: 800px) {
