@@ -173,6 +173,12 @@ body.dark-mode nav {
     background-color: rgba(0, 0, 0, 0.9); /* Change background color for dark mode */
 }
 
+
+.mobile-menu-icon {
+    font-size: 30px; /* Increase font size for the ☰ icon */
+    display: none; /* Hide by default on larger screens */
+}
+
 /* Mobile navigation menu styles */
 .mobile-menu {
     display: none; /* Hide by default */
