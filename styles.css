@@ -1,211 +1,227 @@
- /* Resetting default margins and paddings */
-        body, h1, h2, p {
-            margin: 0;
-            padding: 0;
-        }
+/* styles.css */
 
-        a {
-            color: #00950c; /* Change the color to the green used in your webpage */
-        }
+/* Resetting default margins and paddings */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
 
-        /* Applying default font and background */
-        body {
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-            background-color: #f6f6f6;
-            color: #333;
-            position: relative; /* Added for positioning the GitHub button */
-        }
+a {
+    color: #00950c; /* Change the color to the green used in your webpage */
+}
 
-        /* Container for the whole page */
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-        }
+/* Applying default font and background */
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #f6f6f6;
+    color: #333;
+    position: relative; /* Added for positioning the GitHub button */
+}
 
-        /* Header styles */
-        header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
+/* Container for the whole page */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
 
-        header h1 {
-            color: #00950c;
-            font-weight: bold;
-            font-size: 80px;
-            margin-bottom: 10px;
-        }
+/* Header styles */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
 
-        /* Section styles */
-        section {
-            margin-bottom: 30px;
-        }
+header h1 {
+    color: #00950c;
+    font-weight: bold;
+    font-size: 80px;
+    margin-bottom: 10px;
+}
 
-        h2 {
-            color: #00950c;
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
+/* Section styles */
+section {
+    margin-bottom: 30px;
+}
 
-        p {
-            font-size: 16px;
-            line-height: 1.6;
-        }
+h2 {
+    color: #00950c;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
 
-        /* Footer styles */
-        footer {
-            text-align: center;
-            margin-top: 30px;
-        }
+p {
+    font-size: 16px;
+    line-height: 1.6;
+}
 
-        footer p {
-            font-size: 14px;
-            color: #888;
-        }
+/* Footer styles */
+footer {
+    text-align: center;
+    margin-top: 30px;
+}
 
-        /* Dark mode styles */
-        body.dark-mode {
-            background-color: #222;
-            color: #fff;
-        }
+footer p {
+    font-size: 14px;
+    color: #888;
+}
 
-        .container.dark-mode {
-            background-color: #333;
-            color: #fff;
-        }
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #222;
+    color: #fff;
+}
 
-        .dark-mode-toggle {
-            position: fixed;
-            bottom: 80px;
-            right: 20px;
-            padding: 10px 20px;
-            background-color: #333;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
+.container.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
 
-        .dark-mode-toggle:hover {
-            background-color: #555;
-        }
+.dark-mode-toggle {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
-        .download-button {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            padding: 10px 20px;
-            background-color: #00950c;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
+.dark-mode-toggle:hover {
+    background-color: #555;
+}
 
-        .download-button a {
-            text-decoration: none;
-            color: #fff;
-        }
+.download-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #00950c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
-        .download-button:hover {
-            background-color: #006108;
-        }
+.download-button a {
+    text-decoration: none;
+    color: #fff;
+}
 
-        /* GitHub button styles */
-        .github-button {
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            padding: 10px;
-            background-color: #333;
-            border: none;
-            border-radius: 50%;
-            cursor: pointer;
-            z-index: 1000; /* Ensure GitHub button appears above other content */
-        }
+.download-button:hover {
+    background-color: #006108;
+}
 
-        .github-button img {
-            width: 30px;
-            height: 30px;
-        }
+/* GitHub button styles */
+.github-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    padding: 10px;
+    background-color: #333;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1000; /* Ensure GitHub button appears above other content */
+}
 
-        /* Navigation bar styles */
-        nav {
-            text-align: center;
-            margin-bottom: 20px;
-            font-size: 20px; /* Increase text size */
-        }
+.github-button img {
+    width: 30px;
+    height: 30px;
+}
 
-        nav a {
-            text-decoration: none;
-            color: #00950c;
-            font-weight: bold;
-            margin: 0 15px; /* Increased margin for better spacing */
-        }
+/* Navigation bar styles */
+nav {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 20px; /* Increase text size */
+}
 
-        nav a:hover {
-            text-decoration: underline;
-        }
+nav a {
+    text-decoration: none;
+    color: #00950c; /* Set navigation text color to green */
+    font-weight: bold;
+    margin: 0 15px; /* Increased margin for better spacing */
+}
 
-        /* Mobile navigation menu styles */
-        .mobile-menu-icon {
-            font-size: 30px; /* Increase font size for the ☰ icon */
-            display: none; /* Hide by default on larger screens */
-        }
+nav a:hover {
+    text-decoration: underline;
+}
 
-        .mobile-menu {
-            display: none; /* Hide by default */
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: #fff;
-            z-index: 999; /* Ensure it appears above other content */
-        }
+/* Sticky navigation bar */
+nav {
+    position: relative;
+    z-index: 1000;
+}
 
-        .mobile-menu a {
-            display: block;
-            padding: 15px 20px; /* Increased padding for better touch area */
-            color: #00950c; /* Set navigation text color for mobile */
-            font-size: 20px; /* Increase text size */
-        }
+nav.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for visual effect */
+}
 
-        /* Style for dark mode */
-        body.dark-mode nav a {
-            color: #6eff6e; /* Change navigation link color in dark mode */
-        }
+/* Mobile navigation menu styles */
+.mobile-menu-icon {
+    font-size: 30px; /* Increase font size for the ☰ icon */
+    display: none; /* Hide by default on larger screens */
+}
 
-        body.dark-mode nav a:hover {
-            text-decoration: underline; /* Keep underline effect in dark mode */
-        }
+.mobile-menu {
+    display: none; /* Hide by default */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 999; /* Ensure it appears above other content */
+}
 
-        body.dark-mode .mobile-menu {
-            background-color: #333; /* Change background color of mobile menu in dark mode */
-        }
+.mobile-menu a {
+    display: block;
+    padding: 15px 20px; /* Increased padding for better touch area */
+    color: #00950c; /* Set navigation text color to green for mobile */
+    font-size: 20px; /* Increase text size */
+}
 
-        body.dark-mode .mobile-menu a {
-            color: #6eff6e; /* Change text color of mobile menu items in dark mode */
-        }
+/* Style for dark mode */
+body.dark-mode nav a {
+    color: #6eff6e; /* Change navigation link color in dark mode */
+}
 
-        @media only screen and (max-width: 800px) {
-            /* Adjust styles for smaller screens */
-            nav {
-                display: none; /* Hide navigation links */
-            }
+body.dark-mode nav a:hover {
+    text-decoration: underline; /* Keep underline effect in dark mode */
+}
 
-            .mobile-menu-icon {
-                display: block; /* Display the menu icon */
-                position: absolute;
-                top: 20px;
-                right: 20px;
-                z-index: 1000; /* Ensure it appears above other content */
-                cursor: pointer;
-            }
+body.dark-mode .mobile-menu {
+    background-color: #333; /* Change background color of mobile menu in dark mode */
+}
 
-            .mobile-menu.open {
-                display: block; /* Display the menu when open */
-            }
-        }
+body.dark-mode .mobile-menu a {
+    color: #6eff6e; /* Change text color of mobile menu items in dark mode */
+}
+
+@media only screen and (max-width: 800px) {
+    /* Adjust styles for smaller screens */
+    nav {
+        display: none; /* Hide navigation links */
+    }
+
+    .mobile-menu-icon {
+        display: block; /* Display the menu icon */
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1000; /* Ensure it appears above other content */
+        cursor: pointer;
+    }
+
+    .mobile-menu.open {
+        display: block; /* Display the menu when open */
+    }
+}
