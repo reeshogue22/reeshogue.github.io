@@ -134,7 +134,15 @@
             var mobileMenu = document.querySelector('.mobile-menu');
             mobileMenu.classList.toggle('open');
         }
-
+    
+        // Function to hide the mobile menu when a navigation link is clicked
+        document.querySelectorAll('.mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                var mobileMenu = document.querySelector('.mobile-menu');
+                mobileMenu.classList.remove('open');
+            });
+        });
+    
         // Function to toggle dark mode
         function toggleDarkMode() {
             var body = document.body;
@@ -145,7 +153,7 @@
             }
         }
     </script>
-
+        
 </body>
 
 </html>
