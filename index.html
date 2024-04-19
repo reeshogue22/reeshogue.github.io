@@ -13,9 +13,8 @@
         }
 
         a {
-    color: #00950c; /* Change the color to the green used in your webpage */
+            color: #00950c; /* Change the color to the green used in your webpage */
         }
-
 
         /* Applying default font and background */
         body {
@@ -140,56 +139,81 @@
             width: 30px;
             height: 30px;
         }
+
+        /* Navigation bar styles */
+        nav {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #00950c;
+            font-weight: bold;
+            margin: 0 10px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 
 <body>
 
-    <div class="container">
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#contact">Contact Information</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#certifications">Certifications</a>
+    </nav>
+
+    <div class="container" id="about">
         <header>
             <h1>Rees Hogue</h1>
             <p>Welcome to my personal webpage!</p>
         </header>
 
-            <section>
-                <h2>About Me</h2>
-                <p>24 year old data scientist! I enjoy AI, ML, and creating new things!</p>
-            </section>
-    
-            <section>
-                <h2>Contact Information</h2>
-                <p>Email: <a href="mailto:reeshogue22@gmail.com?subject=Rees Hogue">reeshogue22@gmail.com</a></p>
-                <p>Location: Jonesboro, AR</p>
-            </section>
-    
-            <section>
-                <h2>Skills</h2>
-                <h3>📈 Data Science Frameworks</h3>
-                <ul>
-                    <li>PyTorch</li>
-                    <li>TensorFlow</li>
-                    <li>Scikit-learn</li>
-                    <li>NumPy</li>
-                    <li>Pandas</li>
-                    <li>Matplotlib</li>
-                    
-                </ul>
-                <h3>🚀 Web Development</h3>
-                <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                </ul>
-                <h3>👨🏻‍💻 Programming Languages</h3>
-                <ul>
-                    <li>Go</li>
-                    <li>Python</li>
-                    <li>JavaScript</li>
-                    <li>Java</li>
-                    <li>C++</li>
-                    <li>SQL</li>
-                </ul>
-        </section>
         <section>
+            <h2>About Me</h2>
+            <p>24 year old data scientist! I enjoy AI, ML, and creating new things!</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Information</h2>
+            <p>Email: <a href="mailto:reeshogue22@gmail.com?subject=Rees Hogue">reeshogue22@gmail.com</a></p>
+            <p>Location: Jonesboro, AR</p>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <h3>📈 Data Science Frameworks</h3>
+            <ul>
+                <li>PyTorch</li>
+                <li>TensorFlow</li>
+                <li>Scikit-learn</li>
+                <li>NumPy</li>
+                <li>Pandas</li>
+                <li>Matplotlib</li>
+            </ul>
+            <h3>🚀 Web Development</h3>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+            </ul>
+            <h3>👨🏻‍💻 Programming Languages</h3>
+            <ul>
+                <li>Go</li>
+                <li>Python</li>
+                <li>JavaScript</li>
+                <li>Java</li>
+                <li>C++</li>
+                <li>SQL</li>
+            </ul>
+        </section>
+
+        <section id="education">
             <h2>Education</h2>
             <h3>🎓 High School Diploma</h3>
             <ul>
@@ -197,7 +221,7 @@
                     <p>Valley View High School</p>
                 </li>
                 <li>
-                   <p>Graduation: May 2018</p>
+                    <p>Graduation: May 2018</p>
                 </li>
             </ul>
             <h3>👨‍💻 Coding Bootcamp</h3>
@@ -211,7 +235,7 @@
             </ul>
         </section>
 
-        <section>
+        <section id="certifications">
             <h2>Certifications</h2>
             <ul>
                 <li>
@@ -220,7 +244,6 @@
                 <li>
                     <p>Issued By: HackerRank</p>
                 </li>
-
             </ul>
         </section>
 
