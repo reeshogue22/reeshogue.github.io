@@ -75,6 +75,11 @@
             color: #fff;
         }
 
+        .container.dark-mode {
+            background-color: #333;
+            color: #fff;
+        }
+
         .dark-mode-toggle {
             position: fixed;
             bottom: 80px;
@@ -212,6 +217,10 @@
         function toggleDarkMode() {
             var body = document.body;
             body.classList.toggle("dark-mode");
+            var containers = document.getElementsByClassName("container");
+            for (var i = 0; i < containers.length; i++) {
+                containers[i].classList.toggle("dark-mode");
+            }
         }
     </script>
 
