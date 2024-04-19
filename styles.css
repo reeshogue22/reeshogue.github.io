@@ -87,7 +87,7 @@ body.dark-mode {
     background-color: #333;
     color: #fff;
     border: none;
-    border-radius: 50px;
+    border-radius: 30px;
     cursor: pointer;
 }
 
@@ -103,7 +103,7 @@ body.dark-mode {
     background-color: #00950c;
     color: #fff;
     border: none;
-    border-radius: 50px;
+    border-radius: 30px;
     cursor: pointer;
 }
 
