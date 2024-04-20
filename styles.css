@@ -198,19 +198,13 @@ body.dark-mode nav {
 }
 
 .mobile-menu a {
-    display: block; /* Maintain block level for full width, easy touch */
-    padding: 10px 20px; /* Sufficient padding for touch interaction */
+    display: block;
+    padding: 15px 20px; /* Increased padding for better touch area */
     color: #00950c; /* Set navigation text color to green for mobile */
-    font-size: 18px; /* Increase font size for readability on mobile */
-    text-align: center; /* Center-align the text */
-    text-decoration: none; /* Remove underline from links */
-    margin: 10px auto; /* Add top and bottom margin for spacing between links */
-    border: 2px solid #00950c; /* Circular border */
-    border-radius: 50%; /* Make the border circular */
-    width: 50px; /* Set a specific width */
-    height: 50px; /* Ensure the height is the same as the width to maintain the circle shape */
-    line-height: 46px; /* Adjust line height to vertically center the text inside the circle */
-}
+    font-size: 20px; /* Increase text size */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transitions for hover effects */
+    text-decoration: none; /* No underline */
+    border-bottom: 1px solid #f1f1f1; /* Add a subtle divider between items */
 }
 
 /* Style for dark mode */
