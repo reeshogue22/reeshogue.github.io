@@ -246,3 +246,34 @@ body.dark-mode .mobile-menu a {
         display: none; /* Hide the menu icon on desktop screens */
     }
 }
+
+#testimonials {
+    background-color: #f8f8f8; /* Light background for the section */
+    padding: 20px;
+    text-align: center; /* Center-align the text */
+}
+
+.testimonial-container {
+    margin: 20px auto; /* Center-align the container and add some margin */
+    padding: 15px;
+    max-width: 800px; /* Limit the width for readability */
+}
+
+blockquote {
+    font-style: italic; /* Italicize quotes */
+    color: #555; /* Subtle text color */
+    quotes: "“" "”" "‘" "’"; /* Stylish quotes */
+}
+
+blockquote:before {
+    content: open-quote;
+}
+
+blockquote:after {
+    content: close-quote;
+}
+
+.testimonial-author {
+    font-weight: bold; /* Make the author's name bold */
+    margin-top: 10px; /* Spacing after the quote */
+}
