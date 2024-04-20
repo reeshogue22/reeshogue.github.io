@@ -242,28 +242,5 @@
         AOS.init();
     </script>
 
-
-    <!-- Popup Container -->
-    <div id="popup-container" style="display: none;">
-        <div id="popup-content">
-            <p>Hi</p>
-            <button onclick="closePopup()">Close</button>
-        </div>
-    </div>
-<script>
-function showPopup() {
-    document.getElementById('popup-container').style.display = 'flex';
-}
-
-function closePopup() {
-    document.getElementById('popup-container').style.display = 'none';
-}
-
-// Show the popup every 30 seconds
-setInterval(showPopup, 3000);
-
-// Initially show the popup when the page loads
-window.onload = showPopup;
-</script>
 </body>
 </html>
