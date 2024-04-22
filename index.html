@@ -19,7 +19,7 @@
     <div class="container">
 
         <header data-aos="zoom-out">
-            <h1>print("Rees Hogue");</h1>
+            <h1 id='loading-text'>print("Rees Hogue");</h1>
             <p>Welcome to my resume webpage!</p>
         </header>
 
@@ -195,6 +195,8 @@
                 containers[i].classList.toggle("dark-mode");
             }
         }
+
+        
     </script>
 
     <!-- Initialize AOS -->
@@ -203,5 +205,22 @@
         AOS.init();
     </script>
 
+    <script>
+            // Function to load text character by character
+            function loadText(element, text, delay) {
+                var index = 0;
+                var interval = setInterval(function() {
+                    if (index < text.length) {
+                        element.textContent += text[index];
+                        index++;
+                    } else {
+                        clearInterval(interval);
+                    }
+                }, delay);
+            }
+
+            // Call the loadText function with the desired element, text, and delay
+            loadText(document.getElementById('loading-text'), "print(\"Rees Hogue\");", 100); // Adjust the delay as needed
+    </script>
 </body>
 </html>
