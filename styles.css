@@ -28,6 +28,12 @@ body {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
+/* Define the font face */
+@font-face {
+    font-family: 'JetBrainsMono-ExtraBold';
+    src: url('JetBrainsMono-ExtraBold.ttf') format('truetype');
+}
+
 /* Header styles */
 header {
     text-align: center;
@@ -35,10 +41,11 @@ header {
 }
 
 header h1 {
-    color: #00950c; /* Your original text color */
-    font-weight: bold;
+    font-family: 'JetBrainsMono-ExtraBold', fallbacks, sans-serif; /* Specify the font family */
+    font-weight: normal; /* No need for font-weight since it's an extra bold font */
     font-size: 80px;
     margin-bottom: 10px;
+    color: #00950c; /* Your original text color */
 }
 
 
