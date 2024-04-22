@@ -43,7 +43,7 @@ header {
 header h1 {
     font-family: 'JetBrainsMono-ExtraBold', fallbacks, sans-serif; /* Specify the font family */
     font-weight: normal; /* No need for font-weight since it's an extra bold font */
-    font-size: 50px;
+    font-size: 20px;
     margin-bottom: 10px;
     color: #00950c; /* Your original text color */
 }
