@@ -39,13 +39,6 @@ header h1 {
     font-weight: bold;
     font-size: 80px;
     margin-bottom: 10px;
-    /* Adding 3D text shadow */
-    text-shadow: 
-        1px 1px 0 #000,   /* Layer 1 black for depth */
-        2px 2px 0 #000,   /* Layer 2 */
-        3px 3px 0 #000,   /* Layer 3 */
-        4px 4px 0 #000,   /* Layer 4 */
-        5px 5px 0 #000;   /* Layer 5 */
 }
 
 
