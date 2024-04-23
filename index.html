@@ -19,11 +19,7 @@
     <div class="container">
 
         <header data-aos="zoom-out">
-            <h1>print('''</h1>
             <h1 id='loading-text'></h1>
-            <h1>
-                ''');
-            </h1>
             <p>Welcome to my resume webpage!</p>
         </header>
 
@@ -209,22 +205,32 @@
         AOS.init();
     </script>
 
-    <script>
-            // Function to load text character by character
-            function loadText(element, text, delay) {
-                var index = 0;
-                var interval = setInterval(function() {
-                    if (index < text.length) {
-                        element.textContent += text[index];
-                        index++;
-                    } else {
-                        clearInterval(interval);
-                    }
+<script>
+    // Function to load text character by character
+    function loadText(element, texts, delay, index) {
+        if (!texts || index >= texts.length) {
+            index = 0;
+        }
+
+        var text = texts[index];
+        var interval = setInterval(function() {
+            if (text.length > 0) {
+                element.textContent += text[0];
+                text = text.slice(1);
+            } else {
+                clearInterval(interval);
+                setTimeout(function() {
+                    loadText(element, texts, delay, index + 1);
                 }, delay);
             }
+        }, delay);
+    }
 
-            // Call the loadText function with the desired element, text, and delay
-            loadText(document.getElementById('loading-text'), "Rees Hogue", 200); // Adjust the delay as needed
-    </script>
+    // Call the loadText function with the desired element, texts, delay, and initial index
+    var texts = ["Rees Hogue", "Hello World", "Welcome to my website"]; // Array of texts to cycle through
+    var index = 0;
+    loadText(document.getElementById('loading-text'), texts, 200, index);
+</script>
+
 </body>
 </html>
