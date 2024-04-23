@@ -124,6 +124,27 @@ body.dark-mode {
     background-color: #006108;
 }
 
+.cta-button {
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #00950c;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.cta-button a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.cta-button:hover {
+    background-color: #006108;
+}
+
 /* GitHub button styles */
 .github-button {
     position: fixed;
