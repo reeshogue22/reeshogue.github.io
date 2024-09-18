@@ -1,249 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Personal webpage of Rees Hogue, showcasing his resume, skills, projects, education, certifications.">
-    <meta name="keywords" content="Rees Hogue, data scientist, machine learning, web development, Python, TensorFlow, PyTorch, HTML, CSS, JavaScript">
-    <meta name="author" content="Rees Hogue">
-    <title>Rees Hogue - Personal Webpage</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to the external CSS file -->
-    <!-- AOS Animation library -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@next/dist/aos.css">
+    <title>Hogue AI Catalog</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        h1 {
+            text-align: center;
+            width: 100%;
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+            color: #333;
+        }
+        .contact {
+            text-align: center;
+            width: 100%;
+            font-size: 1rem;
+            margin-bottom: 40px;
+            color: #555;
+        }
+        .card {
+            background-color: #fff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin: 15px;
+            padding: 20px;
+            width: 45%;
+            box-sizing: border-box;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+        .card h2 {
+            color: #333;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+        .price {
+            font-weight: bold;
+            color: #28a745;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+        .card p {
+            color: #555;
+            font-size: 1rem;
+        }
+        a {
+            color: #28a745;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            .card {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
-
 <body>
-
     <div class="container">
-
-        <header data-aos="zoom-out">
-            <h1 id='loading-text'></h1>
-            <p>Welcome to my resume webpage!</p>
-        </header>
-
-
-        <!-- Navigation bar -->
-        <nav class="nav-links">
-            <a href="#about">About Me</a>
-            <a href="#contact">Contact Information</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#education">Education</a>
-            <a href="#certifications">Certifications</a>
-        </nav>
-
-        <!-- Mobile navigation menu icon -->
-        <div class="mobile-menu-icon" onclick="toggleMobileMenu()">
-            ☰
-        </div>
-
-        <!-- Mobile navigation menu -->
-        <div class="mobile-menu">
-            <a href="#about">About Me</a>
-            <a href="#contact">Contact Information</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#education">Education</a>
-            <a href="#certifications">Certifications</a>
+        <h1>Hogue AI Catalog</h1>
+        <div class="contact">
+            Contact: <a href="mailto:reeshogue22@gmail.com">reeshogue22@gmail.com</a>
         </div>
         
-        <section id="about" data-aos="zoom-out">
-            <h2>About Me</h2>
-            <p>Experienced data scientist with a passion for leveraging machine learning and artificial intelligence to drive actionable insights from complex datasets. Skilled in Python, TensorFlow, PyTorch, and scikit-learn for developing and deploying predictive models. Additionally, proficient in video editing software and techniques, with a keen eye for detail and creativity.</p>
-        </section>
+        <div class="card">
+            <h2>Video Editing</h2>
+            <p class="price">$30</p>
+            <p>High-quality video editing services tailored to your needs.</p>
+        </div>
 
-        <section id="contact" data-aos="zoom-out">
-            <h2>Contact Information</h2>
-            <p>Email: <a href="mailto:reeshogue22@gmail.com?subject=Rees Hogue">reeshogue22@gmail.com</a></p>
-            <p>Location: Jonesboro, AR</p>
-        </section>
-        
-        <section id="skills" data-aos="zoom-out">
-            <h2>Skills</h2>
-            <h3>📊 Data Science</h3>
-            <p>Passionate about working with data, I've developed skills in data preprocessing, visualization, and machine learning using Python, NumPy, Pandas, and scikit-learn. I'm also proficient in deep learning with TensorFlow and PyTorch, and have experience with neural networks, reinforcement learning, language models, and computer vision tools like OpenCV and Pillow.</p>
-            <ul>
-                <li>Python</li>
-                <li>NumPy</li>
-                <li>Pandas</li>
-                <li>Matplotlib</li>
-                <li>Scikit-learn</li>
-                <li>TensorFlow</li>
-                <li>PyTorch</li>
-                <li>Neural Networks (NNs)</li>
-                <li>Language Models (LLMs)</li>
-                <li>OpenCV</li>
-                <li>Pillow</li>
-            </ul>
-            <h3>🌐 Cloud Computing & Databases</h3>
-            <p>I have experience with cloud computing platforms, including GCP and AWS, and with SQL databases.</p>
-            <ul>
-                <li>GCP</li>
-                <li>AWS</li>
-                <li>SQL</li>
-            </ul>
-            <h3>📄 Web Development</h3>
-            <p>I have experience with web development, including HTML, CSS, and JavaScript.</p>
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-            </ul>
-            <h3>🎯 Other</h3>
-            <p>In addition to my technical skills, I possess strong communication and teamwork skills, with experience in collaboration.</p>
-            <ul>
-                <li>Communication Skills</li>
-                <li>Team Collaboration</li>
-            </ul>
-        </section>
-    <section id="projects" data-aos="zoom-out">
-        <h2>Projects</h2>
-            <h3>🖱️ Algernon - RL Mouse Control Experiment</h3>
-            <p>An experiment to explore the feasibility of using reinforcement learning to control a computer mouse. Developed using Python, PyAutoGUI, and TensorFlow, this project demonstrates the potential of RL agents in interacting with graphical user interfaces.</p>
-            <ul>
-                <li>Technologies Used: Python, PyAutoGUI, TensorFlow</li>
-                <li>Key Features: Reinforcement learning, mouse control, GUI interaction</li>
-            </ul>
-        <h3>🌐 Personal Resume Website</h3>
-        <p>This website serves as both a professional portfolio and a showcase of my ability to work with AI tools like ChatGPT to develop web applications. Designed and built with the assistance of LLMs, it features a responsive layout, interactive elements, and is optimized for both desktop and mobile devices. I also applied prompt engineering techniques to enhance the interaction between LLMs and the development process, optimizing their functionality for web application development.</p>
-        <ul>
-            <li>Technologies Used: HTML, CSS, JavaScript, LLMs</li>
-            <li>Key Features: Responsive design, interactive navigation, dynamic content, AI-assisted development, prompt engineering</li>
-        </ul>
-            <h3>🔮 Vythia - Video Frame Prediction</h3>
-            <p>Vythia is an innovative project that utilizes machine learning techniques to predict and generate future video frames. Built with PyTorch, FFMPEG, yt-dlp, and Python, Vythia showcases the potential of AI in video content generation and prediction.</p>
-            <ul>
-                <li>Technologies Used: PyTorch, FFMPEG, yt-dlp, Python</li>
-                <li>Key Features: Video frame prediction, machine learning, video content generation</li>
-            </ul>
-    </section>
+        <div class="card">
+            <h2>AI Jingle Curation - Basic</h2>
+            <p class="price">$10</p>
+            <p>Curating the best jingle from 8 song samples to match your requirements.</p>
+        </div>
 
-        <section id="education" data-aos="zoom-out">
-            <h2>Education</h2>
-            <div>
-                <h3>🎓 High School Diploma</h3>
-                <ul>
-                    <li>Valley View High School</li>
-                    <li>Graduation: May 2018</li>
-                </ul>
-            </div>
-            <div>
-                <h3>👨‍💻 Coding Bootcamp</h3>
-                <ul>
-                    <li>TripleTen Coding Bootcamp</li>
-                    <li>Expected Graduation: November 2024</li>
-                </ul>
-            </div>
-        </section>
+        <div class="card">
+            <h2>AI Jingle Curation - Educational</h2>
+            <p class="price">$10</p>
+            <p>Specifically tailored for educational content, selecting the most fitting jingle from 8 samples.</p>
+        </div>
 
-        <section id="certifications" data-aos="zoom-out">
-            <h2>Certifications</h2>
-            <ul>
-                <li>HackerRank Python Certification</li>
-                <li>Issued By: HackerRank</li>
-            </ul>
-        </section>
-
-        <section id="feedback" data-aos="zoom-out">
-            <h2>Feedback</h2>
-                <p>I value your feedback, please fill out the form below:</p>
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd2a3ryLrbWawq2CJ3PqSWMZyuFqJxsLNiJuSbrQlpPpDi4_A/viewform?embedded=true" width="100%" height="900" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-        </section>
-
-
-        <footer>
-            <p>With a 👍 by Rees Hogue. All rights reserved.</p>
-        </footer>
+        <div class="card">
+            <h2>Facetuned AI Logo</h2>
+            <p class="price">$15</p>
+            <p>Using a text-to-image model, finetuned with the client's face to create a unique logo.</p>
+        </div>
     </div>
-
-    <button class="download-button">
-        <a href="./resume.pdf" download="rees_hogue_resume.pdf">Download Resume</a>
-    </button>
-    
-    <button class="cta-button">
-        <a href="mailto:reeshogue22@gmail.com?subject=Hiring Inquiry">Hire Me</a>
-    </button>
-    
-    <button class="dark-mode-toggle" onclick="toggleDarkMode()">
-        Toggle Dark Mode
-    </button>
-
-   
-
-    <a class="github-button" href="https://github.com/reeshogue22" target="_blank">
-        <img src="github-icon.png" alt="GitHub">
-    </a>
-
-    <!-- JavaScript for sticky navigation -->
-    <script>
-        window.addEventListener('scroll', function() {
-            var nav = document.querySelector('nav');
-            if (window.scrollY > 100) { // Adjust 100 to the desired scroll position
-                nav.classList.add('sticky');
-            } else {
-                nav.classList.remove('sticky');
-            }
-        });
-
-        function toggleMobileMenu() {
-            var mobileMenu = document.querySelector('.mobile-menu');
-            mobileMenu.classList.toggle('open');
-        }
-
-        document.querySelectorAll('.mobile-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                var mobileMenu = document.querySelector('.mobile-menu');
-                mobileMenu.classList.remove('open');
-            });
-        });
-
-        function toggleDarkMode() {
-            var body = document.body;
-            body.classList.toggle("dark-mode");
-            var containers = document.getElementsByClassName("container");
-            for (var i = 0; i < containers.length; i++) {
-                containers[i].classList.toggle("dark-mode");
-            }
-        }
-
-        
-    </script>
-
-    <!-- Initialize AOS -->
-    <script src="https://cdn.jsdelivr.net/npm/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
-
-<script>
-    // Function to load text character by character
-    function loadText(element, texts, delay, index) {
-        if (!texts || index >= texts.length) {
-            index = 0;
-        }
-
-        var text = texts[index];
-        element.textContent = "‎ "; // Clear the text content before starting
-
-        var interval = setInterval(function() {
-            if (text.length > 0) {
-                element.textContent += text[0];
-                text = text.slice(1);
-            } else {
-                clearInterval(interval);
-                setTimeout(function() {
-                    loadText(element, texts, delay, index + 1);
-                }, delay);
-            }
-        }, delay);
-    }
-
-    // Call the loadText function with the desired element, texts, delay, and initial index
-    var texts = ["Rees Hogue", "Web Developer", "ML Engineer"]; // Array of texts to cycle through
-    var index = 0;
-    loadText(document.getElementById('loading-text'), texts, 200, index);
-</script>
 </body>
 </html>
