@@ -55,6 +55,19 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
+            opacity: 0;
+            animation: fadeIn 1s ease-in forwards; /* Adding fade-in animation */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px); /* Starts slightly lower */
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0); /* Ends in the original position */
+            }
         }
 
         .card {
@@ -154,7 +167,7 @@
             </div>
 
             <div class="card">
-                <h2>Facetune</h2>
+                <h2>Pareidolia</h2>
                 <p class="price">$19.99</p>
                 <p>Turn your face into a unique logo.</p>
             </div>
@@ -168,7 +181,7 @@
 
     <!-- Footer section -->
     <div class="footer">
-        Designed by Rees Hogue with a 👍
+        Designed by Rees Hogue with a 👍,
     </div>
 </body>
 </html>
