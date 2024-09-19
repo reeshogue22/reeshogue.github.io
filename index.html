@@ -28,24 +28,24 @@
         h1 {
             font-size: 4rem;
             font-weight: bold;
-            background: linear-gradient(to right, #007aff, #5856d6, #ff2d55, #ff9500, #ffcc00);
+            background: linear-gradient(180deg, #007aff, #5856d6, #ff2d55, #ff9500, #ffcc00); /* Vertical gradient */
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             margin: 0;
             text-align: center;
-            background-size: 300%; /* Increased size for smoother transitions */
-            animation: gradientShift 5s ease infinite; /* Gradient animation */
+            background-size: 300% 300%; /* Expand gradient size vertically */
+            animation: gradientShift 5s ease infinite; /* Vertical gradient animation */
         }
 
         @keyframes gradientShift {
             0% {
-                background-position: 0% 50%;
+                background-position: 50% 0%;
             }
             50% {
-                background-position: 100% 50%;
+                background-position: 50% 100%;
             }
             100% {
-                background-position: 0% 50%;
+                background-position: 50% 0%;
             }
         }
 
