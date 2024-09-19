@@ -33,6 +33,20 @@
             -webkit-text-fill-color: transparent;
             margin: 0;
             text-align: center;
+            background-size: 300%; /* Increased size for smoother transitions */
+            animation: gradientShift 5s ease infinite; /* Gradient animation */
+        }
+
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
         }
 
         h2 {
@@ -56,7 +70,7 @@
             flex-wrap: wrap;
             justify-content: space-between;
             opacity: 0;
-            animation: fadeIn 1s ease-in forwards; /* Adding fade-in animation */
+            animation: fadeIn 1s ease-in forwards; /* Fade-in animation */
         }
 
         @keyframes fadeIn {
@@ -167,7 +181,7 @@
             </div>
 
             <div class="card">
-                <h2>Facetuner</h2>
+                <h2>Facetune</h2>
                 <p class="price">$19.99</p>
                 <p>Turn your face into a unique logo.</p>
             </div>
@@ -181,7 +195,7 @@
 
     <!-- Footer section -->
     <div class="footer">
-        Designed by Rees Hogue with a 👍,
+        Designed by Rees Hogue with 👍
     </div>
 </body>
 </html>
