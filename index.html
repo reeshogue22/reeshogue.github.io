@@ -24,30 +24,42 @@
             flex-grow: 1; /* Allows content to expand and fill vertical space */
             width: 100%;
         }
+h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    background: linear-gradient(180deg, #007aff, #5856d6, #ff2d55, #ff9500, #ffcc00); /* Vertical gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+    text-align: center;
+    background-size: 300% 300%; /* Expand gradient size vertically */
+    animation: gradientShift 5s ease infinite, glow 2s ease-in-out infinite; /* Add glow animation */
+}
 
-        h1 {
-            font-size: 4rem;
-            font-weight: bold;
-            background: linear-gradient(180deg, #007aff, #5856d6, #ff2d55, #ff9500, #ffcc00); /* Vertical gradient */
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin: 0;
-            text-align: center;
-            background-size: 300% 300%; /* Expand gradient size vertically */
-            animation: gradientShift 5s ease infinite; /* Vertical gradient animation */
-        }
+@keyframes gradientShift {
+    0% {
+        background-position: 50% 0%;
+    }
+    50% {
+        background-position: 50% 100%;
+    }
+    100% {
+        background-position: 50% 0%;
+    }
+}
 
-        @keyframes gradientShift {
-            0% {
-                background-position: 50% 0%;
-            }
-            50% {
-                background-position: 50% 100%;
-            }
-            100% {
-                background-position: 50% 0%;
-            }
-        }
+/* Keyframe for glowing effect */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px #ffcc00, 0 0 20px #ff9500, 0 0 30px #ff2d55, 0 0 40px #5856d6, 0 0 50px #007aff;
+    }
+    50% {
+        text-shadow: 0 0 20px #ffcc00, 0 0 30px #ff9500, 0 0 40px #ff2d55, 0 0 50px #5856d6, 0 0 60px #007aff;
+    }
+    100% {
+        text-shadow: 0 0 10px #ffcc00, 0 0 20px #ff9500, 0 0 30px #ff2d55, 0 0 40px #5856d6, 0 0 50px #007aff;
+    }
+}
 
         h2 {
             font-size: 1.8rem;
