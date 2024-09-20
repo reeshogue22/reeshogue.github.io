@@ -134,11 +134,22 @@
             margin-top: 10px; /* Add spacing from the previous content */
         }
         
+
         .card p.examples::before {
             content: "Examples: "; /* Add "Examples:" before the text */
-            color: #ffcc00; /* Gold color for emphasis */
+            font-size: 1.5rem;
+            font-weight: bold;
+            background: linear-gradient(180deg, #007aff, #5856d6, #ff2d55, #ff9500, #ffcc00); /* Same vertical gradient as h1 */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 300% 300%;
+            animation: gradientShift 5s ease infinite;
+            text-shadow: 
+                0 0 5px rgba(255, 255, 255, 0.5),
+                0 0 10px rgba(255, 255, 255, 0.5),
+                0 0 15px rgba(255, 255, 255, 0.5),
+                0 0 20px rgba(255, 255, 255, 0.5); /* Glowing effect */
         }
-
         
         a {
             font-size: 1rem;
