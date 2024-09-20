@@ -171,23 +171,20 @@
             font-weight: bold;
         }
 
-        a:hover {
-            text-decoration: underline;
-	    animation: glowUp 1s ease-in-out infinite;
-        }
-	    
+	
+	a:hover {
+	    text-decoration: underline;
+	    animation: glowUp 0.5s ease-in-out forwards;
+	}
+	
 	@keyframes glowUp {
 	    0% {
-	        text-shadow: 0 0 5px #66b0ff, 0 0 10px #66b0ff, 0 0 15px #66b0ff;
-	    }
-	    50% {
-	        text-shadow: 0 0 10px #66b0ff, 0 0 20px #66b0ff, 0 0 25px #66b0ff;
+	        text-shadow: none; /* Start with no shadow */
 	    }
 	    100% {
 	        text-shadow: 0 0 5px #66b0ff, 0 0 10px #66b0ff, 0 0 15px #66b0ff;
 	    }
-	}
-	    
+	}	    
 
         .contact {
             font-size: 1rem;
