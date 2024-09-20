@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hogue AI Catalog</title>
+    <!-- ... (other head elements) ... -->
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -35,6 +33,12 @@
             text-align: center;
             background-size: 300% 300%; /* Expand gradient size vertically */
             animation: gradientShift 5s ease infinite; /* Vertical gradient animation */
+            /*** Added glowing text outline ***/
+            text-shadow:
+                0 0 5px rgba(255, 255, 255, 0.5),
+                0 0 10px rgba(255, 255, 255, 0.5),
+                0 0 15px rgba(255, 255, 255, 0.5),
+                0 0 20px rgba(255, 255, 255, 0.5);
         }
 
         @keyframes gradientShift {
