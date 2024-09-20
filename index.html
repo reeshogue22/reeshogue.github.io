@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
     <!-- ... (other head elements) ... -->
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f9f9f9;
+            background-color: #121212; /* Dark background */
             margin: 0;
             padding: 0;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            color: #333;
+            color: #f5f5f5; /* Light text color */
         }
 
         .content {
@@ -33,7 +34,7 @@
             text-align: center;
             background-size: 300% 300%; /* Expand gradient size vertically */
             animation: gradientShift 5s ease infinite; /* Vertical gradient animation */
-            /*** Added glowing text outline ***/
+            /*** Glowing text outline ***/
             text-shadow:
                 0 0 5px rgba(255, 255, 255, 0.5),
                 0 0 10px rgba(255, 255, 255, 0.5),
@@ -58,11 +59,12 @@
             font-weight: 500;
             margin: 10px 0;
             text-align: center;
+            color: #f5f5f5; /* Light text color */
         }
 
         p {
             font-size: 1rem;
-            color: #888;
+            color: #cccccc; /* Lighter text color */
             margin-bottom: 30px;
             text-align: center;
         }
@@ -89,8 +91,8 @@
         }
 
         .card {
-            background-color: #fff;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            background-color: #1e1e1e; /* Dark card background */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Adjusted shadow for dark mode */
             border-radius: 10px;
             margin: 15px;
             padding: 20px;
@@ -103,11 +105,11 @@
 
         .card:hover {
             transform: scale(1.05);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
         }
 
         .card h2 {
-            color: #333;
+            color: #f5f5f5; /* Light text color */
             font-size: 1.8rem;
             margin-bottom: 15px;
         }
@@ -120,13 +122,13 @@
         }
 
         .card p {
-            color: #555;
+            color: #cccccc; /* Light text color */
             font-size: 1rem;
         }
 
         a {
             font-size: 1rem;
-            color: #007aff;
+            color: #66b0ff; /* Light blue for links */
             text-decoration: none;
             font-weight: bold;
         }
@@ -137,17 +139,17 @@
 
         .contact {
             font-size: 1rem;
-            color: #555;
+            color: #cccccc; /* Light text color */
             margin-bottom: 40px;
             text-align: center;
         }
 
         .footer {
             font-size: 1rem;
-            color: #888;
+            color: #888888;
             text-align: center;
             padding: 20px 0;
-            background-color: #f1f1f1;
+            background-color: #1a1a1a; /* Dark footer background */
             width: 100%;
         }
 
