@@ -126,7 +126,21 @@
             color: #cccccc; /* Light text color */
             font-size: 1rem;
         }
+        
+        .examples {
+            font-weight: bold;
+            font-size: 1.1rem; /* Adjust font size */
+            color: #66b0ff; /* Light blue for better visibility */
+            margin-top: 10px; /* Add spacing from the previous content */
+            text-align: left; /* Aligns the text to the left */
+        }
+        
+        .card p.examples::before {
+            content: "Examples: "; /* Add "Examples:" before the text */
+            color: #ffcc00; /* Gold color for emphasis */
+        }
 
+        
         a {
             font-size: 1rem;
             color: #66b0ff; /* Light blue for links */
@@ -172,21 +186,21 @@
                 <h2>Timeline</h2>
                 <p class="price">$29.99</p>
                 <p>Quality video editing services tailored to your needs.</p>
-                <p class="examples">Weddings/Anniversary/Vacation</p>
+                <p class="examples">Weddings/Anniversaries/Vacations</p>
             </div>
 
             <div class="card">
                 <h2>Jukebox</h2>
                 <p class="price">$9.99</p>
-                <p>Jingle custom-tailored for you.</p>
-                <p class="examples">Birthdays/Business/Podcasts</p>
+                <p>Jingles and songs custom-tailored for you.</p>
+                <p class="examples">Birthdays/Anniversaries/Podcasts</p>
             </div>
 
             <div class="card">
                 <h2>Twintune</h2>
                 <p class="price">$19.99</p>
                 <p>Turn your face into a unique logo.</p>
-                <p class="examples">Business/Thumbnail/Merchandise</p>
+                <p class="examples">Businesses/Thumbnails/Merchandise</p>
             </div>
         </div>
 
