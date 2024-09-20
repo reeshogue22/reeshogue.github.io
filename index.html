@@ -250,5 +250,22 @@
     <div class="footer">
         Designed by Rees Hogue with 👍
     </div>
+    
+    <script>
+        document.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent immediate navigation
+
+                // Add glow effect when clicked or tapped
+                this.classList.add('glowing');
+
+                // After a short delay, navigate to the link
+                setTimeout(() => {
+                    window.location.href = this.href;
+                }, 500); // Adjust the delay to match the glow duration
+            });
+        });
+    </script>
+
 </body>
 </html>
