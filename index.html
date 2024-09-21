@@ -245,6 +245,57 @@
             }
         }
     </style>
+
+    <!-- Glowing Cursor Element -->
+    <div class="glowing-cursor"></div>
+    <style>
+    /* Basic body style */
+    body {
+	cursor: none; /* Hide default cursor */
+    }
+
+    /* Glowing cursor */
+    .glowing-cursor {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(0,175,255,0.6) 60%, rgba(0,175,255,0) 100%);
+	pointer-events: none; /* Make sure it doesn't interfere with clicks */
+	transition: transform 0.1s ease, background-color 0.3s ease;
+	z-index: 1000; /* Ensure it stays on top */
+	box-shadow: 0 0 15px rgba(0, 175, 255, 0.5), 0 0 30px rgba(0, 175, 255, 0.3);
+    }
+
+    /* Increase the size of the glow when hovering over links */
+    a:hover ~ .glowing-cursor, 
+    a:focus ~ .glowing-cursor {
+	width: 30px;
+	height: 30px;
+	background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,105,180,0.6) 60%, rgba(255,105,180,0) 100%);
+	box-shadow: 0 0 30px rgba(255, 105, 180, 0.5), 0 0 45px rgba(255, 105, 180, 0.3);
+    }
+    </style>
+    <script>
+    // Get the glowing cursor element
+    const glowingCursor = document.querySelector('.glowing-cursor');
+
+    // Function to move the glowing cursor element to follow mouse or touch
+    function moveCursor(e) {
+        glowingCursor.style.transform = `translate(${e.pageX - 10}px, ${e.pageY - 10}px)`; // Adjust for element center
+    }
+
+    // Mouse movement tracking
+    document.addEventListener('mousemove', moveCursor);
+
+    // Touch movement tracking
+    document.addEventListener('touchmove', function(e) {
+        moveCursor(e.touches[0]); // Use first touch point
+    });
+    </script>
+
 </head>
 <body>
     <h1>Hogue AI</h1>
@@ -264,7 +315,8 @@
         </div>
         <div class="card" data-video="https://imgur.com/a/sample-3-PJ45pHa">
             <h2>Twintune</h2>
-            <p class="price">$19.99</p>87            <p>Turn old everyday photos into a shiny logo!</p>
+            <p class="price">$19.99</p>
+	    <p>Turn old everyday photos into a shiny logo!</p>
             <p class="examples">Businesses/Thumbnails/Merchandise</p>
         </div>
     </div>
