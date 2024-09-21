@@ -250,7 +250,7 @@
     <h1>Hogue AI</h1>
 
     <div class="container">
-        <div class="card">
+        <div class="card" data-video="https://youtu.be/SttvZSMU_gQ">
             <h2>Timeline</h2>
             <p class="price">$29.99</p>
             <p>Quality AI video editing services tailored to your needs!</p>
@@ -291,6 +291,21 @@
                 }, 500); // Adjust the delay to match the glow duration
             });
         });
+    </script>
+    <script>
+    // Get all the card elements
+    var cards = document.querySelectorAll('.card');
+
+    // Loop through each card and add a click event listener
+    cards.forEach(function(card) {
+	card.addEventListener('click', function() {
+	    // Get the video URL from the data-video attribute
+	    var videoUrl = card.getAttribute('data-video');
+	    
+	    // Open the video in a new tab
+	    window.open(videoUrl, '_blank');
+	});
+    });
     </script>
 </body>
 </html>
