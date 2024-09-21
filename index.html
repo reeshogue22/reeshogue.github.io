@@ -10,10 +10,10 @@
             background-color: #121212; /* Dark background */
             margin: 0;
             padding: 0;
+            color: #f5f5f5; /* Light text color */
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            color: #f5f5f5; /* Light text color */
         }
 
         .content {
@@ -23,6 +23,7 @@
             align-items: center; /* Horizontally center */
             flex-grow: 1; /* Allows content to expand and fill vertical space */
             width: 100%;
+            padding: 20px;
         }
 
         h1 {
@@ -31,11 +32,10 @@
             background: linear-gradient(180deg, #007aff, #5856d6, #ff2d55, #ff9500, #ffcc00); /* Vertical gradient */
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            margin: 0;
+            margin: 0 0 30px 0;
             text-align: center;
             background-size: 300% 300%; /* Expand gradient size vertically */
             animation: gradientShift 5s ease infinite; /* Vertical gradient animation */
-            /*** Glowing text outline ***/
             text-shadow:
                 0 0 5px rgba(255, 255, 255, 0.5),
                 0 0 10px rgba(255, 255, 255, 0.5),
@@ -55,62 +55,24 @@
             }
         }
 
-        @keyframes GradientShiftRotated {
-            0% {
-                background-position: 9% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }
-        }
-
-        h2 {
-            font-size: 1.8rem;
-            font-weight: 500;
-            margin: 10px 0;
-            text-align: center;
-            color: #f5f5f5; /* Light text color */
-        }
-
-        p {
-            font-size: 1rem;
-            color: #cccccc; /* Lighter text color */
-            margin-bottom: 30px;
-            text-align: center;
-        }
-
         .container {
-            width: 90%;
-            margin: 20px auto;
             display: flex;
+            justify-content: center; /* Center the cards */
+            align-items: stretch;
             flex-wrap: wrap;
-            justify-content: space-between;
-            opacity: 0;
-            animation: fadeIn 1s ease-in forwards; /* Fade-in animation */
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px); /* Starts slightly lower */
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0); /* Ends in the original position */
-            }
+            width: 100%;
+            max-width: 1200px;
+            gap: 20px; /* Add space between the cards */
         }
 
         .card {
             background-color: #1e1e1e; /* Dark card background */
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Adjusted shadow for dark mode */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Shadow for dark mode */
             border-radius: 10px;
-            margin: 15px;
             padding: 20px;
-            width: 30%; /* 3 cards per row */
-            box-sizing: border-box;
+            flex: 1 1 calc(33.333% - 40px); /* Make 3 cards per row, with space in-between */
+            max-width: 300px;
+            text-align: center;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             position: relative;
             overflow: hidden;
@@ -124,11 +86,11 @@
         .card h2 {
             font-size: 1.8rem;
             margin-bottom: 15px;
-            background: linear-gradient(90deg, #007aff, #5856d6, #ff2d55, #ff9500, #ffcc00); /* Same vertical gradient as h1; just rotated. */
+            background: linear-gradient(90deg, #007aff, #5856d6, #ff2d55, #ff9500, #ffcc00);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-size: 200% 200%;
-            animation: gradientShiftRotated 1s ease infinite;
+            animation: gradientShift 5s ease infinite;
             text-shadow:
                 0 0 5px rgba(255, 255, 255, 0.5),
                 0 0 10px rgba(255, 255, 255, 0.5),
@@ -150,11 +112,10 @@
         
         .examples {
             font-weight: bold;
-            font-size: 1.1rem; /* Adjust font size */
-            color: #66b0ff; /* Light blue for better visibility */
-            margin-top: 10px; /* Add spacing from the previous content */
+            font-size: 1.1rem;
+            color: #66b0ff;
+            margin-top: 10px;
         }
-        
 
         .card p.examples::before {
             content: "Examples"; /* Add "Examples:" before the text */
@@ -163,7 +124,14 @@
             display: block;
             margin-bottom: 10px;
         }
-        
+
+        .contact {
+            font-size: 1rem;
+            color: #cccccc;
+            margin: 30px 0;
+            text-align: center;
+        }
+
         a {
             font-size: 1rem;
             color: #66b0ff; /* Light blue for links */
@@ -171,67 +139,45 @@
             font-weight: bold;
         }
 
-	
-	a:hover,
-	a:focus,
-	a:active {
-	    text-decoration: underline;
-	    animation: glowUp 0.5s ease-in-out forwards;
-	}
-	
-	@keyframes glowUp {
-	    0% {
-	        text-shadow: none; /* Start with no shadow */
-	    }
-	    100% {
-	        text-shadow: 0 0 5px #66b0ff, 0 0 10px #66b0ff, 0 0 15px #66b0ff;
-	    }
-	}	    
-
-        .contact {
-            font-size: 1rem;
-            color: #cccccc; /* Light text color */
-            margin-bottom: 40px;
-            text-align: center;
+        a:hover,
+        a:focus,
+        a:active {
+            text-decoration: underline;
+            animation: glowUp 0.5s ease-in-out forwards;
         }
 
-	body {
-	    display: flex;
-	    flex-direction: column;
-	    min-height: 100vh; /* Full height of the viewport */
-	}
-	
-	.content {
-	    flex-grow: 1; /* Ensures the content takes up available space */
-	}
-	
-	.footer {
-	    font-size: 1rem;
-	    color: #888888;
-	    text-align: center;
-	    padding: 20px 0;
-	    background-color: #1a1a1a; /* Dark footer background */
-	    width: 100%;
-	    position: sticky; /* Stays at the bottom */
-	    bottom: 0; /* Sticks to the bottom */
-	}
+        @keyframes glowUp {
+            0% {
+                text-shadow: none; /* Start with no shadow */
+            }
+            100% {
+                text-shadow: 0 0 5px #66b0ff, 0 0 10px #66b0ff, 0 0 15px #66b0ff;
+            }
+        }
 
+        .footer {
+            font-size: 1rem;
+            color: #888888;
+            text-align: center;
+            padding: 20px 0;
+            background-color: #1a1a1a; /* Dark footer background */
+            width: 100%;
+        }
 
-
-        @media (max-width: 1024px) {
+        @media (max-width: 768px) {
             .card {
-                width: 100%; /* 1 card per row on small screens */
+                flex: 1 1 100%; /* Full width for small screens */
+                max-width: 100%;
             }
         }
     </style>
 </head>
 <body>
     <div class="content">
-        <!-- Header section with Apple-inspired design -->
         <h1>Hogue AI</h1>
 
         <div class="container">
-            <!-- Cards section for your services -->
+            <!-- Cards for your services -->
             <div class="card">
                 <h2>Timeline</h2>
                 <p class="price">$29.99</p>
@@ -244,15 +190,14 @@
                 <p class="price">$9.99</p>
                 <p>Catchy AI jingle/songs customized for you!</p>
                 <p class="examples">Birthdays/Anniversaries/Podcasts</p>
-		</div>
-	    </div>
+            </div>
 
             <div class="card">
                 <h2>Twintune</h2>
                 <p class="price">$19.99</p>
                 <p>Turn old everyday photos into a shiny logo!</p>
                 <p class="examples">Businesses/Thumbnails/Merchandise</p>
-	    </div>
+            </div>
         </div>
 
         <!-- Contact information -->
@@ -261,26 +206,9 @@
         </div>
     </div>
 
-    <!-- Footer section -->
+    <!-- Footer -->
     <div class="footer">
         Designed by Rees Hogue with 👍
     </div>
-    
-    <script>
-        document.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', function(event) {
-                event.preventDefault(); // Prevent immediate navigation
-
-                // Add glow effect when clicked or tapped
-                this.classList.add('glowing');
-
-                // After a short delay, navigate to the link
-                setTimeout(() => {
-                    window.location.href = this.href;
-                }, 1000); // Adjust the delay to match the glow duration
-            });
-        });
-    </script>
-
 </body>
 </html>
