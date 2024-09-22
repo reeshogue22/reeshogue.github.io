@@ -220,6 +220,18 @@
 	    flex-direction: column;
 	    min-height: 100vh; /* Full height of the viewport */
 	}
+
+	.logo-container {
+	    display: flex;
+	    justify-content: center;  /* Horizontal center */
+	    align-items: center;      /* Vertical center */
+	    height: 100vh;            /* Full viewport height to center vertically */
+	}
+	
+	.logo-container svg {
+	    width: 200px;
+	    height: 200px;
+	}
 	
 	.content {
 	    flex-grow: 1; /* Ensures the content takes up available space */
@@ -248,19 +260,21 @@
     </style>
 </head>
 <body>
-<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-  <!-- Abstract design representing AI -->
-  <circle cx="100" cy="50" r="5" fill="white"/>
-  <circle cx="150" cy="100" r="5" fill="white"/>
-  <circle cx="100" cy="150" r="5" fill="white"/>
-  <circle cx="50" cy="100" r="5" fill="white"/>
+<div class="logo-container">
+    <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+      <!-- Abstract design representing AI -->
+      <circle cx="100" cy="50" r="5" fill="white"/>
+      <circle cx="150" cy="100" r="5" fill="white"/>
+      <circle cx="100" cy="150" r="5" fill="white"/>
+      <circle cx="50" cy="100" r="5" fill="white"/>
 
-  <!-- Connecting lines -->
-  <line x1="100" y1="50" x2="150" y2="100" stroke="white" stroke-width="2"/>
-  <line x1="150" y1="100" x2="100" y2="150" stroke="white" stroke-width="2"/>
-  <line x1="100" y1="150" x2="50" y2="100" stroke="white" stroke-width="2"/>
-  <line x1="50" y1="100" x2="100" y2="50" stroke="white" stroke-width="2"/>
-</svg>
+      <!-- Connecting lines -->
+      <line x1="100" y1="50" x2="150" y2="100" stroke="white" stroke-width="2"/>
+      <line x1="150" y1="100" x2="100" y2="150" stroke="white" stroke-width="2"/>
+      <line x1="100" y1="150" x2="50" y2="100" stroke="white" stroke-width="2"/>
+      <line x1="50" y1="100" x2="100" y2="50" stroke="white" stroke-width="2"/>
+    </svg>
+</div>
     <h1>Hogue AI</h1>
 
     <div class="container">
