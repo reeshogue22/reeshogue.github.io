@@ -274,39 +274,40 @@
         }
     </style>
 </head>
-<body>
-<div class="logo-container">
+<body><div class="logo-container">
   <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
     <!-- Gradient Definitions -->
     <defs>
-      <linearGradient id="rainbowGradient1" gradientUnits="userSpaceOnUse">
-        <stop offset="0%" stop-color="#007aff" />
-        <stop offset="25%" stop-color="#5856d6" />
-        <stop offset="50%" stop-color="#ff2d55" />
-        <stop offset="75%" stop-color="#ff9500" />
-        <stop offset="100%" stop-color="#ffcc00" />
-      </linearGradient>
-      
-      <linearGradient id="rainbowGradient2" gradientUnits="userSpaceOnUse">
-        <stop offset="0%" stop-color="#ffcc00" />
-        <stop offset="25%" stop-color="#ff9500" />
-        <stop offset="50%" stop-color="#ff2d55" />
-        <stop offset="75%" stop-color="#5856d6" />
-        <stop offset="100%" stop-color="#007aff" />
+      <linearGradient id="rainbowGradient" gradientUnits="userSpaceOnUse">
+        <stop offset="0%" stop-color="#007aff">
+          <animate attributeName="stop-color" values="#007aff; #ffcc00; #ff9500; #ff2d55; #5856d6; #007aff" dur="5s" repeatCount="indefinite" />
+        </stop>
+        <stop offset="25%" stop-color="#5856d6">
+          <animate attributeName="stop-color" values="#5856d6; #007aff; #ffcc00; #ff9500; #ff2d55; #5856d6" dur="5s" repeatCount="indefinite" />
+        </stop>
+        <stop offset="50%" stop-color="#ff2d55">
+          <animate attributeName="stop-color" values="#ff2d55; #5856d6; #007aff; #ffcc00; #ff9500; #ff2d55" dur="5s" repeatCount="indefinite" />
+        </stop>
+        <stop offset="75%" stop-color="#ff9500">
+          <animate attributeName="stop-color" values="#ff9500; #ff2d55; #5856d6; #007aff; #ffcc00; #ff9500" dur="5s" repeatCount="indefinite" />
+        </stop>
+        <stop offset="100%" stop-color="#ffcc00">
+          <animate attributeName="stop-color" values="#ffcc00; #ff9500; #ff2d55; #5856d6; #007aff; #ffcc00" dur="5s" repeatCount="indefinite" />
+        </stop>
       </linearGradient>
     </defs>
 
     <!-- Abstract AI Design -->
-    <circle cx="100" cy="50" r="5" fill="none" stroke="url(#rainbowGradient1)" stroke-width="5"/>
-    <circle cx="150" cy="100" r="5" fill="none" stroke="url(#rainbowGradient1)" stroke-width="5"/>
-    <circle cx="100" cy="150" r="5" fill="none" stroke="url(#rainbowGradient1)" stroke-width="5"/>
-    <circle cx="50" cy="100" r="5" fill="none" stroke="url(#rainbowGradient1)" stroke-width="5"/>
+    <circle cx="100" cy="50" r="5" fill="none" stroke="url(#rainbowGradient)" stroke-width="5"/>
+    <circle cx="150" cy="100" r="5" fill="none" stroke="url(#rainbowGradient)" stroke-width="5"/>
+    <circle cx="100" cy="150" r="5" fill="none" stroke="url(#rainbowGradient)" stroke-width="5"/>
+    <circle cx="50" cy="100" r="5" fill="none" stroke="url(#rainbowGradient)" stroke-width="5"/>
     
     <!-- Connecting Lines -->
-    <line x1="100" y1="50" x2="150" y2="100" stroke="url(#rainbowGradient1)" stroke-width="2"/>
-    <line x1="150" y1="100" x2="100" y2="150" stroke="url(#rainbowGradient1)" stroke-width="2"/>
-    <line x1="100" y1="150" x2="50" y2="100" stroke="url(#rainbowGradient1)" stroke-width="2"/>
-    <line x1="50" y1="100" x2="100" y2="50" stroke="url(#rainbowGradient1)" stroke-width="2"/>
+    <line x1="100" y1="50" x2="150" y2="100" stroke="url(#rainbowGradient)" stroke-width="2"/>
+    <line x1="150" y1="100" x2="100" y2="150" stroke="url(#rainbowGradient)" stroke-width="2"/>
+    <line x1="100" y1="150" x2="50" y2="100" stroke="url(#rainbowGradient)" stroke-width="2"/>
+    <line x1="50" y1="100" x2="100" y2="50" stroke="url(#rainbowGradient)" stroke-width="2"/>
   </svg>
 </div>
     <h1>Hogue AI</h1>
