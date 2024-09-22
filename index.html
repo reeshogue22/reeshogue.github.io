@@ -220,23 +220,7 @@
 	    flex-direction: column;
 	    min-height: 100vh; /* Full height of the viewport */
 	}
-
-	.logo-container {
-	    display: flex;
-	    justify-content: center;  /* Horizontal center */
-	}
-	
-	.logo-container svg {
-	    width: 100px;
-	    height: 100px;
-	}
-	svg {
-	    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5))   /* Small glow */
-	            drop-shadow(0 0 10px rgba(255, 255, 255, 0.5))  /* Medium glow */
-	            drop-shadow(0 0 15px rgba(255, 255, 255, 0.5))  /* Larger glow */
-	            drop-shadow(0 0 20px rgba(255, 255, 255, 0.5)); /* Biggest glow */
-	}
-
+	    
 	.content {
 	    flex-grow: 1; /* Ensures the content takes up available space */
 	    justify-content: center;
@@ -264,43 +248,7 @@
     </style>
 </head>
 <body>
-<div class="logo-container">
-  <svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
-    <!-- Gradient Definitions with Animation -->
-    <defs>
-      <linearGradient id="animatedGradient" gradientUnits="userSpaceOnUse">
-        <stop offset="0%" stop-color="#007aff">
-          <animate attributeName="stop-color" values="#007aff; #5856d6; #ff2d55; #ff9500; #ffcc00; #007aff" dur="5s" repeatCount="indefinite" />
-        </stop>
-        <stop offset="25%" stop-color="#5856d6">
-          <animate attributeName="stop-color" values="#5856d6; #ff2d55; #ff9500; #ffcc00; #007aff; #5856d6" dur="5s" repeatCount="indefinite" />
-        </stop>
-        <stop offset="50%" stop-color="#ff2d55">
-          <animate attributeName="stop-color" values="#ff2d55; #ff9500; #ffcc00; #007aff; #5856d6; #ff2d55" dur="5s" repeatCount="indefinite" />
-        </stop>
-        <stop offset="75%" stop-color="#ff9500">
-          <animate attributeName="stop-color" values="#ff9500; #ffcc00; #007aff; #5856d6; #ff2d55; #ff9500" dur="5s" repeatCount="indefinite" />
-        </stop>
-        <stop offset="100%" stop-color="#ffcc00">
-          <animate attributeName="stop-color" values="#ffcc00; #007aff; #5856d6; #ff2d55; #ff9500; #ffcc00" dur="5s" repeatCount="indefinite" />
-        </stop>
-      </linearGradient>
-    </defs>
-
-    <!-- Abstract AI Design Circles with Animated Gradient -->
-    <circle cx="50" cy="25" r="5" fill="url(#animatedGradient)" />
-    <circle cx="75" cy="50" r="5" fill="url(#animatedGradient)" />
-    <circle cx="50" cy="75" r="5" fill="url(#animatedGradient)" />
-    <circle cx="25" cy="50" r="5" fill="url(#animatedGradient)" />
-
-    <!-- Connecting Lines with Animated Gradient -->
-    <line x1="50" y1="25" x2="75" y2="50" stroke="url(#animatedGradient)" stroke-width="2"/>
-    <line x1="75" y1="50" x2="50" y2="75" stroke="url(#animatedGradient)" stroke-width="2"/>
-    <line x1="50" y1="75" x2="25" y2="50" stroke="url(#animatedGradient)" stroke-width="2"/>
-    <line x1="25" y1="50" x2="50" y2="25" stroke="url(#animatedGradient)" stroke-width="2"/>
-  </svg>
-</div>
-<h1>Hogue AI</h1>
+    <h1>Hogue AI</h1>
 
     <div class="container">
         <div class="card" data-video="https://youtu.be/SttvZSMU_gQ">
