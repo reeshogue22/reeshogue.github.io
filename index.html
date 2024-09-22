@@ -232,9 +232,11 @@
 	}
 	
 	svg {
-	    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.7)) drop-shadow(0 0 20px rgba(255, 255, 255, 0.5));
-	}
-	
+	    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.4))  /* Soft inner glow */
+		    drop-shadow(0 0 15px rgba(255, 255, 255, 0.3)) /* Outer glow */
+		    drop-shadow(0 0 30px rgba(255, 255, 255, 0.2)); /* Extended soft glow */
+	}	
+
 	.content {
 	    flex-grow: 1; /* Ensures the content takes up available space */
 	    justify-content: center;
