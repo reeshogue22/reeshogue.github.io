@@ -5,247 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Hogue AI offers affordable AI-powered services including video editing, custom jingles, and logo design. Explore our catalog to enhance your projects with AI-driven creativity. Services: Timeline, Jukebox, Twintune. Contact us for custom inquiries!">
     <title>Hogue AI Catalog</title>
-    <style>
-
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #121212; /* Dark background */
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            color: #f5f5f5; /* Light text color */
-	    -webkit-user-select: none; /* Safari */
-	    -moz-user-select: none;    /* Firefox */
-	    -ms-user-select: none;     /* Internet Explorer/Edge */
-	    user-select: none;         /* Non-prefixed version, currently supported by Chrome, Opera and Edge */
-        }
-
-        .content {
-            display: flex;
-            flex-direction: column;
-            justify-content: center; /* Vertically center */
-            align-items: center; /* Horizontally center */
-            flex-grow: 1; /* Allows content to expand and fill vertical space */
-            width: 100%;
-        }
-
-        h1 {
-            font-size: 4rem;
-            font-weight: bold;
-            background: linear-gradient(180deg, #007aff, #5856d6, #ff2d55, #ff9500, #ffcc00); /* Vertical gradient */
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin: 50px 0 20px;
-            text-align: center;
-            background-size: 300% 300%; /* Expand gradient size vertically */
-            animation: gradientShift 5s ease infinite; /* Vertical gradient animation */
-            /*** Glowing text outline ***/
-            text-shadow:
-                0 0 5px rgba(255, 255, 255, 0.5),
-                0 0 10px rgba(255, 255, 255, 0.5),
-                0 0 15px rgba(255, 255, 255, 0.5),
-                0 0 20px rgba(255, 255, 255, 0.5);
-        }
-
-        @keyframes gradientShift {
-            0% {
-                background-position: 50% 0%;
-            }
-            50% {
-                background-position: 50% 100%;
-            }
-            100% {
-                background-position: 50% 0%;
-            }
-        }
-
-        @keyframes GradientShiftRotated {
-            0% {
-                background-position: 9% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }
-        }
-
-        h2 {
-            font-size: 1.8rem;
-            font-weight: 500;
-            margin: 10px 0;
-            text-align: center;
-            color: #f5f5f5; /* Light text color */
-        }
-
-        p {
-            font-size: 1rem;
-            color: #cccccc; /* Lighter text color */
-            margin-bottom: 30px;
-            text-align: center;
-        }
-
-        .container {
-            width: 90%;
-            margin: 50px auto;
-            display: flex;
-            flex-wrap: wrap;
-            opacity: 0;
-            animation: fadeIn 1s ease-in forwards; /* Fade-in animation */
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px); /* Starts slightly lower */
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0); /* Ends in the original position */
-            }
-        }
-
-        .card {
-            background-color: #1e1e1e; /* Dark card background */
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Adjusted shadow for dark mode */
-            border-radius: 10px;
-            margin: 15px;
-            padding: 20px;
-            width: 30%; /* 3 cards per row */
-            box-sizing: border-box;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-	.card:hover {
-	    transform: scale(1.05);
-	    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 
-	                0 0 20px rgba(255, 255, 255, 0.5), 
-	                0 0 30px rgba(255, 255, 255, 0.5);
-	    animation: glow 1s ease-in-out forwards;
-	}
-	
-	@keyframes glow {
-	    0% {
-	        box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-	    }
-	    50% {
-	        box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
-	    }
-	    100% {
-	        box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
-	    }
-	}
-
-	.card h2 {
-            font-size: 1.8rem;
-            margin-bottom: 15px;
-            background: linear-gradient(90deg, #007aff, #5856d6, #ff2d55, #ff9500, #ffcc00); /* Same vertical gradient as h1; just rotated. */
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-size: 200% 200%;
-            animation: gradientShiftRotated 1s ease infinite;
-            text-shadow:
-                0 0 5px rgba(255, 255, 255, 0.5),
-                0 0 10px rgba(255, 255, 255, 0.5),
-                0 0 15px rgba(255, 255, 255, 0.5),
-                0 0 20px rgba(255, 255, 255, 0.5);
-        }
-
-        .price {
-            font-weight: bold;
-            color: #28a745;
-            font-size: 1.4rem;
-            margin-bottom: 15px;
-        }
-
-        .card p {
-            color: #cccccc; /* Light text color */
-            font-size: 1rem;
-        }
-        
-        .examples {
-            font-weight: bold;
-            font-size: 1.1rem; /* Adjust font size */
-            color: #66b0ff; /* Light blue for better visibility */
-            margin-top: 10px; /* Add spacing from the previous content */
-        }
-        
-
-        .card p.examples::before {
-            content: "Examples"; /* Add "Examples:" before the text */
-            font-size: 1rem;
-            font-style: italic;
-            display: block;
-            margin-bottom: 10px;
-        }
-        
-        a {
-            font-size: 1rem;
-            color: #66b0ff; /* Light blue for links */
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-	
-	a:hover,
-	a:focus,
-	a:active {
-	    text-decoration: underline;
-	    animation: glowUp 0.5s ease-in-out forwards;
-	}
-	
-	@keyframes glowUp {
-	    0% {
-	        text-shadow: none; /* Start with no shadow */
-	    }
-	    100% {
-	        text-shadow: 0 0 5px #66b0ff, 0 0 10px #66b0ff, 0 0 15px #66b0ff;
-	    }
-	}	    
-
-        .contact {
-            font-size: 1rem;
-            color: #cccccc; /* Light text color */
-            margin-bottom: 80px;
-            text-align: center;
-        }
-
-	body {
-	    display: flex;
-	    flex-direction: column;
-	    min-height: 100vh; /* Full height of the viewport */
-	}
-	    
-	.content {
-	    flex-grow: 1; /* Ensures the content takes up available space */
-	    justify-content: center;
-	}
-	
-	.footer {
-	    font-size: 0.9rem;
-	    color: #888888;
-	    text-align: center;
-	    padding: 20px 0;
-	    background-color: #1a1a1a; /* Dark footer background */
-	    width: 100%;
-	    position: fixed; /* Stays at the bottom */
-	    bottom: 0; /* Sticks to the bottom */
-	    z-index: 10;
-	}
-
-
-
-        @media (max-width: 1024px) {
-            .card {
-                width: 100%; /* 1 card per row on small screens */
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Hogue AI</h1>
@@ -266,17 +26,16 @@
         <div class="card" data-video="https://imgur.com/a/sample-3-PJ45pHa">
             <h2>Twintune</h2>
             <p class="price">$19.99</p>
-	    <p>Turn old everyday photos into a shiny logo!</p>
+            <p>Turn old everyday photos into a shiny logo!</p>
             <p class="examples">Businesses/Thumbnails/Merchandise</p>
         </div>
     </div>
 
     <div class="contact">
-	<p>Interested in our services? Let's talk!</p>
-<p>For order inquiries or custom requests, contact us at: <a href="mailto:reeshogue22@gmail.com?subject=Order%20Inquiry&body=Hello%20Hogue%20AI,%0D%0A%0D%0AI%20am%20interested%20in%20learning%20more%20about%20your%20services.%0D%0A%0D%0APlease%20provide%20additional%20information%20at%20your%20earliest%20convenience.%0D%0A%0D%0AThank%20you,%0D%0A%5BYour%20Name%5D">reeshogue22@gmail.com</a></p>
+        <p>Interested in our services? Let's talk!</p>
+        <p>For order inquiries or custom requests, contact us at: <a href="mailto:reeshogue22@gmail.com?subject=Order%20Inquiry&body=Hello%20Hogue%20AI,%0D%0A%0D%0AI%20am%20interested%20in%20learning%20more%20about%20your%20services.%0D%0A%0D%0APlease%20provide%20additional%20information%20at%20your%20earliest%20convenience.%0D%0A%0D%0AThank%20you,%0D%0A%5BYour%20Name%5D">reeshogue22@gmail.com</a></p>
     </div>
-	
-    <!-- Footer Section -->
+
     <div class="footer">
         Designed by Rees Hogue with a 👍
     </div>
@@ -284,32 +43,23 @@
     <script>
         document.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', function(event) {
-                event.preventDefault(); // Prevent immediate navigation
-
-                // Add glow effect when clicked or tapped
+                event.preventDefault();
                 this.classList.add('glowing');
-
-                // After a short delay, navigate to the link
                 setTimeout(() => {
                     window.location.href = this.href;
-                }, 500); // Adjust the delay to match the glow duration
+                }, 500);
             });
         });
     </script>
-    <script>
-    // Get all the card elements
-    var cards = document.querySelectorAll('.card');
 
-    // Loop through each card and add a click event listener
-    cards.forEach(function(card) {
-	card.addEventListener('click', function() {
-	    // Get the video URL from the data-video attribute
-	    var videoUrl = card.getAttribute('data-video');
-	    
-	    // Open the video in a new tab
-	    window.open(videoUrl, '_blank');
-	});
-    });
+    <script>
+        var cards = document.querySelectorAll('.card');
+        cards.forEach(function(card) {
+            card.addEventListener('click', function() {
+                var videoUrl = card.getAttribute('data-video');
+                window.open(videoUrl, '_blank');
+            });
+        });
     </script>
 </body>
 </html>
